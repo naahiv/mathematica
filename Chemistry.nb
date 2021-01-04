@@ -1,0 +1,144 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4929,        134]
+NotebookOptionsPosition[      4008,        109]
+NotebookOutlinePosition[      4539,        128]
+CellTagsIndexPosition[      4496,        125]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "A", " ", "function", " ", "to", " ", "find", " ", "the", " ", "molar", 
+    " ", "mass", " ", "of", " ", "a", " ", "compound", " ", "or", " ", 
+    "element"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"MM", "[", "elem_", "]"}], ":=", 
+    RowBox[{"WolframAlpha", "[", 
+     RowBox[{
+      RowBox[{"elem", "<>", " ", "\"\< molar mass\>\""}], ",", 
+      "\"\<Result\>\""}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Find", " ", "the", " ", "chemical", " ", "formula"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"CF", "[", "elem_", "]"}], ":=", 
+    RowBox[{"WolframAlpha", "[", 
+     RowBox[{
+      RowBox[{"\"\<chemical formula of \>\"", "<>", "elem"}], ",", 
+      "\"\<Result\>\""}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Finding", " ", "the", " ", "numeric", " ", "value", " ", "of", " ", 
+     "the", " ", 
+     RowBox[{"MM", "[", "elem", "]"}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"NumMM", "[", "elem_", "]"}], ":=", 
+    RowBox[{"ToExpression", "[", 
+     RowBox[{"StringTake", "[", 
+      RowBox[{
+       RowBox[{"ToString", "[", 
+        RowBox[{"MM", "[", "elem", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", 
+         RowBox[{"-", "16"}]}], "}"}]}], "]"}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.8169797651767583`*^9, 3.8169798145287266`*^9}, {
+  3.816979860657118*^9, 3.8169798630014524`*^9}, {3.8170473852852507`*^9, 
+  3.8170475367666173`*^9}, {3.8170477689570327`*^9, 3.817047798387089*^9}, {
+  3.817047844034998*^9, 3.817047859491011*^9}, {3.8170480800310307`*^9, 
+  3.8170480866629124`*^9}, {3.817048158190771*^9, 3.8170482083118396`*^9}, {
+  3.8170482513460507`*^9, 3.8170483175848308`*^9}, {3.8170483800487146`*^9, 
+  3.8170483826349125`*^9}},
+ CellLabel->"In[51]:=",ExpressionUUID->"1c8cceb5-f32d-404d-90e5-660991500cb9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MM", "[", "\"\<H2O\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.816979787484809*^9, 3.8169798182261057`*^9}, {
+  3.817047684113062*^9, 3.8170476873615484`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"247a1f22-6da9-4059-a6ac-4305dcd8c687"],
+
+Cell[BoxData[
+ TemplateBox[{"18.015`4.697417855177584", 
+   RowBox[{
+    "\"g\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", "\"mol\""}], 
+   "grams per mole", 
+   FractionBox["\"Grams\"", "\"Moles\""]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.816979790902334*^9, 3.8169798229507246`*^9}, 
+   3.81697986778222*^9, 3.817047691463359*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"e3909a1c-32ea-41e7-be21-08339934bd98"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CF", "[", "\"\<Chromate\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.817047508220691*^9, 3.817047551154009*^9}, {
+  3.8170476628976803`*^9, 3.8170476761618834`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"3c875864-126b-4861-91b8-5e025ccbec7f"],
+
+Cell[BoxData[
+ StyleBox[
+  TemplateBox[{
+    TemplateBox[{"\"Cr\"", 
+      SubscriptBox["\"O\"", "4"]}, "RowDefault"], 
+    TemplateBox[{"\"2\"", "\"-\""}, "RowDefault"]},
+   "Superscript"],
+  StripOnInput->False,
+  ScriptBaselineShifts->{0.5, 0.75}]], "Output",
+ CellChangeTimes->{{3.817047526731262*^9, 3.8170475537212524`*^9}, {
+  3.8170476672779875`*^9, 3.8170476783496885`*^9}},
+ CellLabel->"Out[6]=",ExpressionUUID->"b0136045-ce56-42f5-92dd-85b2636d8ecb"]
+}, Open  ]]
+},
+WindowSize->{1016.25, 612.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"43f91ee4-2986-4a93-97ce-ad8d89e3fcae"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1946, 45, 186, "Input",ExpressionUUID->"1c8cceb5-f32d-404d-90e5-660991500cb9"],
+Cell[CellGroupData[{
+Cell[2529, 69, 262, 4, 42, "Input",ExpressionUUID->"247a1f22-6da9-4059-a6ac-4305dcd8c687"],
+Cell[2794, 75, 430, 9, 54, "Output",ExpressionUUID->"e3909a1c-32ea-41e7-be21-08339934bd98"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3261, 89, 267, 4, 42, "Input",ExpressionUUID->"3c875864-126b-4861-91b8-5e025ccbec7f"],
+Cell[3531, 95, 461, 11, 49, "Output",ExpressionUUID->"b0136045-ce56-42f5-92dd-85b2636d8ecb"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
